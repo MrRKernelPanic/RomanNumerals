@@ -105,6 +105,35 @@ describe('Arabic to Roman', () => {
 
     });
 
+    describe('Numerals 400 to 899', () => {
+        test('400 in Roman Numerals is CD', () => {
+            expect(arabic_to_roman_numerals(400)).toBe('CD');
+        });
+        
+        test('739 in Roman Numerals is DCCXXXIX', () => {
+            expect(arabic_to_roman_numerals(739)).toBe('DCCXXXIX');
+        });
+        
+        test('899 in Roman Numerals is DCCCXCIX', () => {
+            expect(arabic_to_roman_numerals(899)).toBe('DCCCXCIX');
+        });
+    });
+
+    describe('Numerals 900 to 4999', () => {
+        test('900 in Roman Numerals is CM', () => {
+            expect(arabic_to_roman_numerals(900)).toBe('CM');
+        });
+        
+        test('2896 in Roman Numerals is MMDCCCXCVI', () => {
+            expect(arabic_to_roman_numerals(2896)).toBe('MMDCCCXCVI');
+        });
+        
+        test('4998 in Roman Numerals is MMMMCMXCVIII', () => {
+            expect(arabic_to_roman_numerals(4998)).toBe('MMMMCMXCVIII');
+        });
+    });
+
+
     test.each([
         {number: 1, numerals: 'I'},
         {number: 15, numerals: 'XV'},

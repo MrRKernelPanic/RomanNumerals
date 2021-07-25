@@ -1,6 +1,24 @@
 function arabic_to_roman_numerals(num) {
     var roman_numerals = '';
 
+    while(Math.floor(num/1000) <= 4 && Math.floor(num/1000) != 0) {
+        roman_numerals += 'M';
+        num -= 1000;
+    }
+    if (num % 1000 >= 900) {
+        roman_numerals +='CM';
+        num -= 900;
+    }
+
+    if (Math.floor(num/500) == 1) {
+        roman_numerals += 'D';
+        num -=500;
+    }
+    if (num % 500 >= 400) {
+        roman_numerals +='CD';
+        num -= 400;
+    }
+
     while(Math.floor(num/100) <= 3 && Math.floor(num/100) != 0) {
         roman_numerals += 'C';
         num -= 100;
