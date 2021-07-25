@@ -1,7 +1,27 @@
 function arabic_to_roman_numerals(num) {
     var roman_numerals = '';
-    
-    while(Math.floor(num/10) <= 9 && Math.floor(num/10) != 0) {
+
+    while(Math.floor(num/100) <= 3 && Math.floor(num/100) != 0) {
+        roman_numerals += 'C';
+        num -= 100;
+    }
+
+    if (num % 100 >= 90) {
+        roman_numerals +='XC';
+        num -= 90;
+    }
+
+    if (Math.floor(num/50) == 1) {
+        roman_numerals += 'L';
+        num -= 50;
+    }
+
+    if (num%50 >= 40) {
+        roman_numerals += 'XL';
+        num -= 40;
+    }
+
+    while(Math.floor(num/10) <= 3 && Math.floor(num/10) != 0) {
         roman_numerals += 'X';
         num -= 10;
     }

@@ -71,4 +71,45 @@ describe('Arabic to Roman', () => {
             expect(arabic_to_roman_numerals(29)).toBe('XXIX');
         });
     });
+
+    describe('Numerals 40 to 89', () => {
+        test('40 in Roman Numerals is XL', () => {
+            expect(arabic_to_roman_numerals(40)).toBe('XL');
+        });
+        
+        test('49 in Roman Numerals is XLIX', () => {
+            expect(arabic_to_roman_numerals(49)).toBe('XLIX');
+        });
+        
+        test('79 in Roman Numerals is LXXIX', () => {
+            expect(arabic_to_roman_numerals(79)).toBe('LXXIX');
+        });
+
+        test('87 in Roman Numerals is LXXXVII', () => {
+            expect(arabic_to_roman_numerals(87)).toBe('LXXXVII');
+        });
+    });
+
+    describe('Numerals 90 to 399', () => {
+        test('90 in Roman Numerals is XC', () => {
+            expect(arabic_to_roman_numerals(90)).toBe('XC');
+        });
+        
+        test('149 in Roman Numerals is CXLIX', () => {
+            expect(arabic_to_roman_numerals(149)).toBe('CXLIX');
+        });
+
+        test('384 in Roman Numerals is CCCLXXXIV', () => {
+            expect(arabic_to_roman_numerals(384)).toBe('CCCLXXXIV');
+        });
+
+    });
+
+    test.each([
+        {number: 1, numerals: 'I'},
+        {number: 15, numerals: 'XV'},
+        {number: 22, numerals: 'XXII'},
+      ])('.add($number, $numerals)', ({number, numerals}) => {
+        expect(arabic_to_roman_numerals(number)).toBe(numerals);
+      });
 });
