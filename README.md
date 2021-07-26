@@ -17,7 +17,6 @@ Optional install JSHint Linter ```npm install jshint```
 
 ### Approach
 This is my first attempt at writing anything in JavaScript. This required some initial setup for NPM (node package manager) however this was fairly simple to integrate within VSCode (my IDE of choice). The ```Jest``` Testing framework was installed which allowed for me to use ```TDD``` (Test Drive Design) for my solution.
-
 Initially starting off small with a single simple test to return 'I' for the number 1. Following Red, Green, Refactor this got me started with my conversion function, additional tests were created for each letter and code produced. 
 
 ```describes``` were added to group the number of tests into sensible segments, e.g. 1-3, 4-8, 9-39, 40-89, 90-399, 400-899, 900-4999 and then individual tests nested amongst them.
@@ -43,7 +42,9 @@ Each time I went up a letter this resulted in a stacked approach, the first code
 
 This eventually end up with testing for 1000s (the biggest unit in this program), then 100s, and then 10s. The mid points of these such as 500, 50 and 5 behaving differently but again follow a pattern and the digits 1-3 needing their own set of rules. 
 
-The initial passed number ```num``` decremented repeatedly throughout the code, this required using while loops for the 1000s, 100s and 10s. Which were later refactored into a single for loop using a dictionary for the Roman numerals. Each letter or pattern of letters were amended to an initial blank string ```roman_numerals``` and then is eventually this is returned.
+The initial passed number ```num``` decremented repeatedly throughout the code, this required using while loops for the 1000s, 100s and 10s. Which were later refactored into a single for loop using a dictionary for the Roman numerals. The refactored code used a dictionary to store all the Roman numerals and there denary equivalents (as the key)  The keys were then exported into an array so they could be stepped through according to get to 1000s, 100s, and 10s.  Hence the variable name ```THT```  When I exported the keys into an array the program sorted them automatically based on value, however I need to reverse this as I wanted 1000 to be value 0 in the array, 500 value 1 etc.  The For loop used uses a step count of 2 to ignore 500,50 and 5 as they behave differently.  They are dealt with accordingly in the code for THT by using +1 to the For loop variable.
+
+Each letter or pattern of letters are amended to an initial blank string ```roman_numerals``` and then is eventually this is returned.
 
 ### Dependencies
 
