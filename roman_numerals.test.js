@@ -14,8 +14,8 @@ describe('Arabic to Roman', () => {
             expect(arabic_to_roman_numerals(3)).toBe('III');
         });
     });
-    describe('Numerals 4 to 8', () => { 
     
+    describe('Numerals 4 to 8', () => { 
         test('4 in Roman Numerals is IV', () => {
             expect(arabic_to_roman_numerals(4)).toBe('IV');
         });
@@ -34,7 +34,6 @@ describe('Arabic to Roman', () => {
     });
     
     describe('Numerals 9 to 39', () => { 
-    
         test('9 in Roman Numerals is IX', () => {
             expect(arabic_to_roman_numerals(9)).toBe('IX');
         });
@@ -132,13 +131,4 @@ describe('Arabic to Roman', () => {
             expect(arabic_to_roman_numerals(4998)).toBe('MMMMCMXCVIII');
         });
     });
-
-
-    test.each([
-        {number: 1, numerals: 'I'},
-        {number: 15, numerals: 'XV'},
-        {number: 22, numerals: 'XXII'},
-      ])('.add($number, $numerals)', ({number, numerals}) => {
-        expect(arabic_to_roman_numerals(number)).toBe(numerals);
-      });
 });
