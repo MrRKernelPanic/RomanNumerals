@@ -1,6 +1,7 @@
 ![Clock](clock.png)
 
 # Roman Numerals from Denary Number
+I really wanted to attempt this programming challenge to see how quickly I could familiarise myself with a new programming language and test framework.  With no previous experience of JavaScript this seemed like a fair challenge.
 
 An implementation of Arabic numbers (from 1 to 4999) to Roman Numerals using JavaScript and the ```Jest``` testing framework.
 
@@ -12,8 +13,6 @@ Carry out ```npm init``` to initialize the project
 Install Jest - ```npm install --save-dev jest```
 
 Finally to test the code use ```npm run test```
-
-Optional install JSHint Linter ```npm install jshint```
 
 ### Approach
 This is my first attempt at writing anything in JavaScript. This required some initial setup for NPM (Node Package Manager) however this was fairly simple to integrate within VSCode (my IDE of choice). The ```Jest``` testing framework was installed which allowed for me to use ```TDD``` (Test Drive Design) for my solution.
