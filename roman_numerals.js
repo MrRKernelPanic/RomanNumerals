@@ -36,7 +36,10 @@ function roman_to_arabic_numerals(roman_num) {
     numeral_values.forEach (function(value) {
         while (roman_num.indexOf(roman_numeral_lookups[value]) > -1){
             arabic_number += value;
-            roman_num = roman_num.substr(0,roman_num.indexOf(roman_numeral_lookups[value])) + roman_num.slice(roman_num.indexOf(roman_numeral_lookups[value])+(roman_numeral_lookups[value].length)); 
+            matching_pattern_found = roman_num.indexOf(roman_numeral_lookups[value]);
+            var _string_upto_slice = roman_num.substr(0,matching_pattern_found)
+            var _string_after_slice = roman_num.slice(matching_pattern_found+(roman_numeral_lookups[value].length)) 
+            roman_num = _string_upto_slice + _string_after_slice;      
         }
     });
 
