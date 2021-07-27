@@ -14,7 +14,6 @@ var roman_numeral_lookups = {
     '1' : 'I'
 }
 
-
 function arabic_to_roman_numerals(arabic_number) {
     var roman_numerals = '';
     var numeral_values = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
