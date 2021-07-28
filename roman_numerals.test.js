@@ -1,8 +1,4 @@
-//const { describe } = require('yargs');
 const conversion = require('./roman_numerals');
-
-//import {arabic_to_roman_numerals} from './roman_numerals'
-//import {roman_to_arabic_numerals} from './roman_numerals'
 
 describe('Arabic to Roman', () => {
     describe('Numerals 1 to 3', () => { 
